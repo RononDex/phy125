@@ -1,4 +1,4 @@
-# ---------------------------------------------------------------------------
+﻿# ---------------------------------------------------------------------------
 # Calculates the bernoulli number for the given n.
 # Also contains some performance optimisiations
 #
@@ -57,6 +57,7 @@ def Factorial(n):
         return 1
 
     result = 1
+
     for i in range(1, n + 1):
         result *= i
     

@@ -6,7 +6,8 @@
     <ProjectGuid>6b86d2d2-237f-4aa9-a45b-f378063d47ac</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>BernoulliNumbers.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
