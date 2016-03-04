@@ -1,5 +1,6 @@
 ﻿# ---------------------------------------------------------------------------
 # Calculates prime numbers in a defined range using the method of Eratosthenes
+# Uses multi threading to get better performance
 #
 # Modul:   PHY125
 # Author:  Tino Heuberger
@@ -37,8 +38,8 @@ def SearchPrimesEratosthenes(start, end):
         if (useMultiThreading):
             # Create mew thread
             t = Thread(target=RemoveMultipleOf, args = (searchRange, i, end, removeFunc))
-            if (len(threads)) == number_of_threads:  # Checks if there are already more threads started than cores available
-                waitForThread = threads.popleft()
+            if (len(threads)) == number_of_threads:  # Checks if there are already all threads started and if there are any aavailable available
+                waitForThread = threads.popleft()    # Waits for the oldest thread to finish in order to start a new one
                 if waitForThread.isAlive():
                     waitForThread.join()
             
@@ -53,14 +54,12 @@ def SearchPrimesEratosthenes(start, end):
 # Removes all the multiples of a certain number from a list
 def RemoveMultipleOf(list, number, end, removeFunc):
     global lock
-
-    curValue = number + number
-    while curValue < end:
+     
+    for i in range(2*number, end, number):
         lock.acquire() 
-        if curValue in list:
-            removeFunc(curValue)
+        if i in list:
+            removeFunc(i)
         lock.release()
-        curValue += number
 
 # Define boundaries for the prime numbers search
 start = 2
@@ -100,6 +99,6 @@ print("")
 # Set p to the primeNumber iteration you want to read out
 p = 840
 if len(result) >= p:
-    print("%s = %s" % (p, result[p]))
+    print("p%s = %s" % (p, result[p]))
 else:
     print("Could not find p%s" % p)
