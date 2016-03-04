@@ -27,7 +27,8 @@ def SearchPrimesEratosthenes(start, end):
 
     searchRange = list(range(start, end))
     removeFunc = searchRange.remove
-
+    
+    # we only need to remove multiples of 2... square root of end
     for i in range(2, int( math.sqrt(end)) + 1):
         if i not in searchRange:
             continue
@@ -61,13 +62,14 @@ def RemoveMultipleOf(list, number, end, removeFunc):
         curValue += number
 
 # Define boundaries for the prime numbers search
-start = 0
-end = 100000
+start = 2
+end = 10000
 
 # Set to true to use multithreading, false for non multithreading
-# Performance results may vary depending on the amount of cpus your machine can handel
-# in my case (using my laptop with an old i5, 2 cores) using multi threading created a bigger
-# overhead than actually boosting performance
+# Performance results may vary depending on the amount of logical cpu cores in your machine, and their IPC and clockrate 
+# in my case (using my laptop with an old i5, 4 cores) using multi threading gave me a boost of around 10-20%,
+# also depends on how big the search range is.
+# I noticed that on the openSuse clients in the computer lab multithreading performance was actually really bad
 useMultiThreading = True
 
 print("Searching Prime numbers in range %i - %i" % (start, end))
@@ -93,8 +95,9 @@ print("")
 print("%i Primzahlen gefunden" % len(result))
 print("")
 
+# Set p to the primeNumber iteration you want to read out
 p = 840
 if len(result) >= p:
-    print("%s = %s" % (p, result[p+2]))
+    print("%s = %s" % (p, result[p]))
 else:
     print("Could not find p%s" % p)
