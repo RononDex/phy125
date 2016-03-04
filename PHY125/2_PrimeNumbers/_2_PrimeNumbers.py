@@ -21,7 +21,7 @@ threads = deque()
 # Return a list containing all prime numbers which are within the defined range
 def SearchPrimesEratosthenes(start, end):
     
-    global number_of_cores
+    global number_of_threads
     global threads
     global useMultiThreading
 
@@ -37,9 +37,10 @@ def SearchPrimesEratosthenes(start, end):
         if (useMultiThreading):
             # Create mew thread
             t = Thread(target=RemoveMultipleOf, args = (searchRange, i, end, removeFunc))
-            if (len(threads)) == number_of_cores:    # Checks if there are already more threads started than cores available
-                waitForThread = threads.popleft()    # if yes wait for the oldest thread to complete
-                waitForThread.join()
+            if (len(threads)) == number_of_threads:  # Checks if there are already more threads started than cores available
+                waitForThread = threads.popleft()
+                if waitForThread.isAlive():
+                    waitForThread.join()
             
             threads.append(t)
             t.start()
@@ -63,12 +64,12 @@ def RemoveMultipleOf(list, number, end, removeFunc):
 
 # Define boundaries for the prime numbers search
 start = 2
-end = 10000
+end = 100000
 
-# Set to true to use multithreading, false for non multithreading
+# Set to true to use multithreading to use all availabe logical cores, false for no multithreading to only use 1 thread
 # Performance results may vary depending on the amount of logical cpu cores in your machine, and their IPC and clockrate 
 # in my case (using my laptop with an old i5, 4 cores) using multi threading gave me a boost of around 10-20%,
-# also depends on how big the search range is.
+# also depends on how big the search range is because multithreading also creates some managing overhead.
 # I noticed that on the openSuse clients in the computer lab multithreading performance was actually really bad
 useMultiThreading = True
 
@@ -77,16 +78,17 @@ print("")
 
 print("Using MultiThreading: %s" % useMultiThreading)
 
+# Get amount of logical cpu cores on this system
 if (useMultiThreading):
     number_of_cores = multiprocessing.cpu_count()
-    print("Running on %s cores, using %s threads" % (number_of_cores, number_of_cores))
+    number_of_threads = number_of_cores
+    print("Running on %s cores, using %s threads" % (number_of_cores, number_of_threads))
 
 # store the time when the executation starts, 
 # so we can measure how long it took to calculate
 startTime = time.time()
 
 result = SearchPrimesEratosthenes(start, end)
-print(result)
 
 print("")
 print("Took %s seconds" % (time.time() - startTime))
