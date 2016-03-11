@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1_BernoulliNumbers", "PHY125\1_BernoulliNumbers.pyproj", "{6B86D2D2-237F-4AA9-A45B-F378063D47AC}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2_PrimeNumbers", "2_PrimeNumbers\2_PrimeNumbers.pyproj", "{3D178745-B93C-4C5E-AF85-D46749295449}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "3_CalcPi", "3_CalcPi\3_CalcPi.pyproj", "{7E17B4DD-56F1-4906-9CB6-9715963AC3B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,8 @@ Global
 		{6B86D2D2-237F-4AA9-A45B-F378063D47AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D178745-B93C-4C5E-AF85-D46749295449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D178745-B93C-4C5E-AF85-D46749295449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E17B4DD-56F1-4906-9CB6-9715963AC3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E17B4DD-56F1-4906-9CB6-9715963AC3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
