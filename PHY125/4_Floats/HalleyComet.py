@@ -37,4 +37,5 @@ for EValue in E:
 
 plt.plot(x, y, linestyle="", marker="o", color="b")
 plt.plot([0], [0], marker="o", color="y")
+plt.xlim([-40,5])
 plt.show()
