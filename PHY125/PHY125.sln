@@ -9,6 +9,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2_PrimeNumbers", "2_PrimeNu
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "3_CalcPi", "3_CalcPi\3_CalcPi.pyproj", "{7E17B4DD-56F1-4906-9CB6-9715963AC3B0}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "4_Floats", "4_Floats\4_Floats.pyproj", "{A947B5FA-9130-437F-81D3-712CB152C0B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{3D178745-B93C-4C5E-AF85-D46749295449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E17B4DD-56F1-4906-9CB6-9715963AC3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E17B4DD-56F1-4906-9CB6-9715963AC3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A947B5FA-9130-437F-81D3-712CB152C0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A947B5FA-9130-437F-81D3-712CB152C0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

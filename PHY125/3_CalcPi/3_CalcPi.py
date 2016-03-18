@@ -1,3 +1,4 @@
+#! python
 # ---------------------------------------------------------------------------
 # Calculates pi until we reach the Feynman point
 #
@@ -24,7 +25,7 @@ def arctan(x, wantedPrecision):
 
     return res
 
-precision = 550
+precision = 549
 print("Calculating Pi...")
 print("Precision (iterations) fror arctan approximiation is set to: %s" % precision)
 
