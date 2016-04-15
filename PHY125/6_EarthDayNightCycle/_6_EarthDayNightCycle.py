@@ -113,7 +113,6 @@ class Map(object):
                 zenit = self.CalcZenitVector(lat, long, inclination, dayAngle, yearAngle)
                 sun = self.CalcSunVector(yearAngle)
                 res = sun * zenit.T
-                #value = res[0][0]
                 grid[y][x] = float(res)* (-1)
         return grid
                 
