@@ -13,6 +13,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "4_Floats", "4_Floats\4_Floa
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "5_ResistorGrid", "5_ResistorGrid\5_ResistorGrid.pyproj", "{5429DAE8-D6D6-4B39-8B96-096647CD3E74}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "6_EarthDayNightCycle", "6_EarthDayNightCycle\6_EarthDayNightCycle.pyproj", "{7D41EF28-A6F3-4D74-9DDA-8AB53ED580B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,8 @@ Global
 		{A947B5FA-9130-437F-81D3-712CB152C0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5429DAE8-D6D6-4B39-8B96-096647CD3E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5429DAE8-D6D6-4B39-8B96-096647CD3E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D41EF28-A6F3-4D74-9DDA-8AB53ED580B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D41EF28-A6F3-4D74-9DDA-8AB53ED580B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
