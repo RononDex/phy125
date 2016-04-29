@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1_BernoulliNumbers", "PHY125\1_BernoulliNumbers.pyproj", "{6B86D2D2-237F-4AA9-A45B-F378063D47AC}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "6_EarthDayNightCycle", "6_EarthDayNightCycle\6_EarthDayNightCycle.pyproj", "{7D41EF28-A6F3-4D74-9DDA-8AB53ED580B7}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "7_Odyssey", "7_Odyssey\7_Odyssey.pyproj", "{8BEC8413-7288-4D95-B3CF-20081029B96A}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "8_MindTheGap", "8_MindTheGap\8_MindTheGap.pyproj", "{5ECBB71B-759D-45F7-ACC8-A0CB6D3C67A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,8 @@ Global
 		{7D41EF28-A6F3-4D74-9DDA-8AB53ED580B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BEC8413-7288-4D95-B3CF-20081029B96A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8BEC8413-7288-4D95-B3CF-20081029B96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ECBB71B-759D-45F7-ACC8-A0CB6D3C67A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ECBB71B-759D-45F7-ACC8-A0CB6D3C67A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
