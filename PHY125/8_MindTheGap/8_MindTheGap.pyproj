@@ -28,6 +28,7 @@
     <Folder Include="data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\wb_agrar.csv" />
     <Content Include="data\wb-popul.csv" />
     <Content Include="data\wb-rate.csv" />
   </ItemGroup>
