@@ -19,6 +19,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "7_Odyssey", "7_Odyssey\7_Od
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "8_MindTheGap", "8_MindTheGap\8_MindTheGap.pyproj", "{5ECBB71B-759D-45F7-ACC8-A0CB6D3C67A4}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "9_Integral", "9_Integral\9_Integral.pyproj", "{BE713CB1-4B83-4F35-A314-48ECE6B02FB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,8 @@ Global
 		{8BEC8413-7288-4D95-B3CF-20081029B96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ECBB71B-759D-45F7-ACC8-A0CB6D3C67A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5ECBB71B-759D-45F7-ACC8-A0CB6D3C67A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE713CB1-4B83-4F35-A314-48ECE6B02FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE713CB1-4B83-4F35-A314-48ECE6B02FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
