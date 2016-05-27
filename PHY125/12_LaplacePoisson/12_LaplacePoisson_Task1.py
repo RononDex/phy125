@@ -23,7 +23,7 @@ g = np.linspace(-1, 1, 51)
 X,Y = np.meshgrid(g,g)
 
 Z = X + 1j*Y
-F= np.sin(Z).real
+F = np.sin(Z).real
 
 lastValue = F*1
 while (not EvaluteConvergence(lastValue, F)):

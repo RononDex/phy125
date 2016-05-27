@@ -18,11 +18,27 @@ def EvaluteConvergence(lastValue, curValue):
                 return True
     return False
 
+def CalcGrid(F, K):
+    Q = 1*F[1:-1, 1:-1]
+    for i in range(1, len(F)-2):
+        for j in range(1, len(F[i])-2):
+            w = 0
+            if i == K+2 and j == K + 1:
+                w = 1
+            elif i == j == K:
+                w = -1
+            Q[i][j] = (F[i+1][j] + F[i-1][j]+F[i][j+1]+F[i][j-1]-w)/4
+    F[1:-1, 1:-1] = Q
+    return F
+    
+
 steps = 51
+K=40
 g = np.linspace(-1, 1, 51)
 X,Y = np.meshgrid(g,g)
+F = 0*(X+Y)
 
-
+F = CalcGrid(F, K)
 
 lastValue = F*1
 while (not EvaluteConvergence(lastValue, F)):
