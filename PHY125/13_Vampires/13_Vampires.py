@@ -12,13 +12,24 @@ from matplotlib.pyplot import figure, plot, show, axes, axis
 from matplotlib.animation import FuncAnimation
 
 def NextStep(fx):
-    d2x = -2 * y
-    d2x[1:-1] += y[2:] + y[:-2]
-    d2x[0] += y[1]
-    d2x[-1] += y[-2]
-    d2x = d2x/dx/dx
-    # then add the reaction terms
-    dy = r * y * (1. - y/K) + D * d2x
+    fxCopy = fx*1
+
+    # Vampire movement phase
+    for i in range(1, len(fx)-1):
+        # Half of the vampires move from the left "pixel" to this one
+        fx[i] += fxCopy[i-1]*0.5
+        fx[i-1] -= fxCopy[i-1]*0.5
+
+        # Half of the vampires move from the right "pixel" to the current one
+        fx[i] += fxCopy[i+1]*0.5
+        fx[i+1] -= fxCopy[i+1]*0.5
+
+    # Vampire bite phase
+    for i in range(0, len(fx)):
+        # From the video we know that the number of bites is proportional to n_vampires * n_persons
+        fx[i] += fx[i] * (1-fx[i])
+
+    return fx
 
 def frame(_):
     global fx
